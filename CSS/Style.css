@@ -1,7 +1,7 @@
 /*Estilos Generales*/
 * {
 	outline: dotted 1px red;
-	
+
 }
 body {
 
@@ -18,10 +18,19 @@ a {
 }
 header {
 	background-color:#333;
+	overflow: hidden;
+	padding: 15px;
 }
 header h1 {
 	color:#fff;
 	margin: 0;
+	width: 300px;
+	float: left;
+}
+header nav{
+	float: right;
+	padding: 11px;
+
 }
 
 header nav ul {
@@ -33,11 +42,21 @@ header nav ul {
 }
 header nav ul li {
 	display: inline-block;
-	
-
 }
 
 header nav a {
      text-align:center;
      padding:5px;
+}
+
+header nav a:hover{
+	color:#333;
+	background-color: #fff;
+
+}
+ header img {
+  float: left;
+  margin: 0;
+  display: inline-block;
+
 }
