@@ -24,8 +24,17 @@ header {
 header h1 {
 	color:#fff;
 	margin: 0;
+	padding-left: 75px;
 	width: 300px;
 	float: left;
+	font-family:; Helvetica, Arial, Open Sns, sans-serif;
+	font-size: 27px;
+	font-weight: bold;
+	background-image: url("../img/logo.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	
+
 }
 header nav{
 	float: right;
@@ -54,9 +63,4 @@ header nav a:hover{
 	background-color: #fff;
 
 }
- header img {
-  float: left;
-  margin: 0;
-  display: inline-block;
 
-}
