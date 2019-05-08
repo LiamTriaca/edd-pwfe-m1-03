@@ -80,11 +80,25 @@ header nav a:hover{
 	font-size: 40px;
 	font-weight: bolder;
 	font-family: Helvetica, Arial, Open Sns, sans-serif;
+	text-align: center;
 
 }
 
+.Noticia {
+	display: flex;
+	flex-direction: row;
+	align-items:center;
+	justify-content:space-around;
+	margin-left: 15px;
+	border-bottom:solid 1px #333;
+	margin-right: 15px;
+}
+.Noticia:last-child {
+	border: none;
+}
+
 .noticias-img{
-	width: 30%;
+	width: 20%;
 
 }
 
@@ -94,7 +108,7 @@ header nav a:hover{
 
 
 .noticia-txt {
-	width: 70%;
+	width: 65%;
 }
 
 .noticia-txt h3 {
@@ -120,4 +134,17 @@ header nav a:hover{
 .noticia-txt a:hover {
       color: orange;
       text-decoration: underline;
+}
+
+
+footer {
+	background-color: #333;
+	padding: 15px
+
+
+}
+
+footer p {
+	color: #fff;
+	text-align:  center;
 }
