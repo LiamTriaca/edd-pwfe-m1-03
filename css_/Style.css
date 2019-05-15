@@ -25,9 +25,8 @@ header h1 {
 	color:#fff;
 	margin: 0;
 	padding-left: 75px;
-	width: 300px;
 	float: left;
-	font-family:; Helvetica, Arial, Open Sns, sans-serif;
+	font-family: Helvetica, Arial, Open Sns, sans-serif;
 	font-size: 27px;
 	font-weight: bold;
 	background-image: url("../img/logo.png");
@@ -148,4 +147,87 @@ footer p {
 	color: #fff;
 	text-align:  center;
 	font-weight: bold;
+}
+#tabla-posiciones {
+	padding: 15px 0;
+}
+#tabla-posiciones table {
+	margin: auto;
+	width: 80%;
+}
+#tabla-posiciones td {
+	padding: 10px;
+	vertical-align: middle;
+}
+#tabla-posiciones th {
+	background-color: red;
+	color: #fff;
+	font-weight: 700;
+	font-size: 20px;
+	padding: 10px;
+}
+#tabla-posiciones tr{
+	background-color: #d9d9d9d9;
+	border-bottom:solid 1px #ccc;
+}
+#tabla-posiciones tr:last-child {
+	border:none;
+}
+#tabla-posiciones td:nth-of-type(odd) {
+	font-size: 24px;
+	font-weight:700;
+	text-align: center;
+}
+#tabla-posiciones td:nth-of-type(even) span {
+	color:#45bbbb;
+	font-weight: 700;
+}
+#menu-mobile {
+	display: none;
+}
+
+/*MEDIA QUERIE*/
+
+@media screen and (max-width: 576px) {
+
+	body{
+		color: red;
+	}
+
+#menu {
+	display:none;
+	float: none;
+	clear: both;
+}
+
+
+#menu li {
+	display: block;
+	text-align: center;
+}
+
+#menu li a {
+	display: block;
+
+}
+
+#menu li a:hover {
+	background-color: orange;
+}
+
+#menu-mobile {
+	float: right;
+	display: block;
+	background: transparent;
+	border: none;
+	color: #FFF;
+	font-size: 20px;
+	line-height: 1,
+	font-weight: bold;
+	padding: 10px;
+}
+#menu-mobile:focus + #menu {
+	color: red;
+	display: block;
+}
 }
