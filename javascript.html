@@ -1,11 +1,30 @@
-<h1>Kiosco "El JeviScript"</h1>
-<button>Nuevo producto +</button>
 
-<section id="productos">
-	
 
-</section>
+<!DOCTYPE html>
+<html>
 
+
+<link rel="stylesheet" href="https://docs.google.com/uc?id=17C6A6tYbFc9esDbgo0Q-HjN2rNjvXbyc">
+<h1>Kiosko <strong>El JeviScript</strong></h1>
+<meta charset="utf-8">
+	<body>
+		
+
+		<button>Nuevo Producto +</button>
+
+		<table>
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Stock</th>
+					<th>Precio</th>
+					<th>Disponible</th>
+				</tr>
+			</thead>
+			<tbody id="productos">
+				<!-- ACÁ TIENEN QUE APARECER LOS PRODUCTOS -->
+			</tbody>
+		</table>
 
 <script>
 	document.querySelector("button").onclick= cargarProducto
@@ -18,17 +37,57 @@ function cargarProducto(){
 	let precio= prompt ("Ingrese precio")
 	let disponible = confirm ("esta disponible") 
   /*Nudo*/
-  if (nombre== "") {
+   /*Condicion 1 */
+  while (nombre== ""|| nombre== null) {
   	alert("ERROR: nombre no puede quedar vacio")
+  	nombre= prompt ("Ingrese nombre")
+  }
+  /*Condicion 2 */
+  if (precio== "" || precio<0 || parseFloat(precio)== NaN) {
+  	alert("ERROR: precio debe ser un numero positivo")
   	return
   }
+  /*Condicion 3*/
+  if (stock== ""|| stock < 0) {
+  	alert("ERROR: stock debe ser un numero positivo")
+  	return
+  }
+  /*Condicion 4*/
+  if (disponible== undefined) {
+  	alert("ERROR: Debe especificar disponibilidad")
+  }
+  /*Variable PrecioFinal*/ 
     let precioFinal = precio * 1.21
    /*Desenlace*/
-    let msg= `<p>El producto <strong>${nombre}</strong> vale ARS ${precioFinal} la unidad</p>`;
-document.querySelector("#productos").insertAdjacentHTML("afterend",msg)
+  
+  // let msg= `<p>El producto <strong>${nombre}</strong> vale ARS ${precioFinal} la unidad</p>`;
+//document.querySelector("#productos").insertAdjacentHTML("afterend",msg)
+
+
+let fila= document.createElement("tr")
+	let celda1= document.createElement("td")
+	let celda2= document.createElement("td")
+	let celda3= document.createElement("td")
+	let celda4= document.createElement("td")
+
+celda1.innerText= nombre
+celda2.innerText= stock + "unid."
+celda3.innerText= `$${precioFinal.toFixed(2)}`
+celda4.innerText= disponible ? ":)" : ":("
+
+
+
+fila.appendChild( celda1 )
+fila.appendChild( celda2 )
+fila.appendChild( celda3 )
+fila.appendChild( celda4 )
+
+document.querySelector("#productos").appendChild(fila)
 }
 
 
-</script>
 
-	
+</script>
+</body>
+
+	</html>
